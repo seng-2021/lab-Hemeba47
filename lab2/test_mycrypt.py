@@ -56,7 +56,12 @@ def test_timing():
     Note: Tests like this need quite a bit of thought when used as a unit test,
     they are non-deterministic and might fail randomly.
 
-    Hint: pad your string to max length and only return wanted length
+    FAILED test_mycrypt.py::test_timing - assert (0.95 * 0.04026469999999993) < 0.00010209999999999386
+    #testaa kestääkö aaa suunnilleen saman aikaa kuin tuhannen aan syötteessä
+    #eli siis ratkaisuna:
+    #tee syötteestä aina 1000 merkkiä pitkä ennen kryptausta, jonka jälkeen poista paddatut merkit
+
+    Hint: pad your string to max length (1000) and only return wanted length
     '''
     timing1 = min(timeit.repeat('mycrypt.encode("a")',
                                 'import mycrypt', repeat=3, number=30))
