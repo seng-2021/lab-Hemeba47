@@ -28,8 +28,6 @@ def encode(s):
             crypted+=codecs.encode(c,'rot13')
         elif c in digitmapping:
             crypted+=digitmapping[c]
-            #toimii muuten paitsi se kusee encryptauksen testauksen koska niissä on lopussa pisteitä
-    #crypted = crypted.ljust(1000-origlen,".")
 
     #poista lopuksi välilyönnit
     crypted = crypted.rstrip()
